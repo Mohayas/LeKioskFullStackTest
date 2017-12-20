@@ -56,3 +56,11 @@ C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskFullStack\obj\Debug\LeKios
 C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskFullStack\obj\Debug\LeKioskFullStack.csproj.CoreCompileInputs.cache
 C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskFullStack\obj\Debug\LeKioskFullStack.dll
 C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskFullStack\obj\Debug\LeKioskFullStack.pdb
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskFullStack\bin\EntityFramework.dll
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskFullStack\bin\EntityFramework.SqlServer.dll
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskFullStack\bin\LeKioskDAO.dll
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskFullStack\bin\LeKioskDAO.pdb
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskFullStack\bin\LeKioskDAO.dll.config
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskFullStack\bin\EntityFramework.xml
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskFullStack\bin\EntityFramework.SqlServer.xml
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskFullStack\bin\fr\EntityFramework.resources.dll
