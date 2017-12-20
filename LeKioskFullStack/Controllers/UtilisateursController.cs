@@ -52,10 +52,10 @@ namespace LeKioskFullStack.Controllers
 
         // POST: api/Utilisateurs
         [HttpPost]
-        [ResponseType(typeof(Utilisateur))]        
+        [ResponseType(typeof(Utilisateur))]
         public HttpResponseMessage Signup(Utilisateur utilisateur)
         {
-                       
+
             try
             {
                 db.Utilisateurs.Add(utilisateur);
@@ -63,17 +63,19 @@ namespace LeKioskFullStack.Controllers
                 var message = Request.CreateResponse(HttpStatusCode.Created, utilisateur);
 
                 //Ajouter le chemin de l'utilisateur créé dans l'entête de requête.
-                message.Headers.Location = new Uri(Request.RequestUri +"/"+ utilisateur.Id);
+                message.Headers.Location = new Uri(Request.RequestUri + "/" + utilisateur.Id);
                 return message;
             }
             catch (Exception ex)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest , ex);
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
             }
 
-            
         }
 
-       
+
+            
+
+
     }
 }

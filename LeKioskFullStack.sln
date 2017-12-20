@@ -3,9 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeKioskFullStack", "LeKioskFullStack\LeKioskFullStack.csproj", "{610818CD-F1BB-4FC1-8120-59D2C933DFDD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeKiosk.FullStack.API", "LeKioskFullStack\LeKiosk.FullStack.API.csproj", "{610818CD-F1BB-4FC1-8120-59D2C933DFDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeKioskDAO", "LeKioskDAO\LeKioskDAO.csproj", "{27A9DE92-D4AC-4777-AB9C-F9B64EB0908E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeKiosk.FullStack.DAO", "LeKioskDAO\LeKiosk.FullStack.DAO.csproj", "{27A9DE92-D4AC-4777-AB9C-F9B64EB0908E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeKiosk.FullStack.Business", "LeKiosk.FullStack.Business\LeKiosk.FullStack.Business.csproj", "{84C538A9-99FA-4C1B-ADFF-F2BB3772AF0E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{27A9DE92-D4AC-4777-AB9C-F9B64EB0908E} = {27A9DE92-D4AC-4777-AB9C-F9B64EB0908E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeKiosk.FullStack.Business.UnitTesting", "LeKiosk.FullStack.Business.UnitTesting\LeKiosk.FullStack.Business.UnitTesting.csproj", "{0E1512A3-13B6-4E05-9FDC-A857841E125C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +28,14 @@ Global
 		{27A9DE92-D4AC-4777-AB9C-F9B64EB0908E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27A9DE92-D4AC-4777-AB9C-F9B64EB0908E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27A9DE92-D4AC-4777-AB9C-F9B64EB0908E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84C538A9-99FA-4C1B-ADFF-F2BB3772AF0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C538A9-99FA-4C1B-ADFF-F2BB3772AF0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C538A9-99FA-4C1B-ADFF-F2BB3772AF0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84C538A9-99FA-4C1B-ADFF-F2BB3772AF0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E1512A3-13B6-4E05-9FDC-A857841E125C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E1512A3-13B6-4E05-9FDC-A857841E125C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E1512A3-13B6-4E05-9FDC-A857841E125C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E1512A3-13B6-4E05-9FDC-A857841E125C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
