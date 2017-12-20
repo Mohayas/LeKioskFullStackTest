@@ -61,7 +61,8 @@ namespace LeKioskFullStack.Controllers
                 db.Utilisateurs.Add(utilisateur);
                 db.SaveChanges();
                 var message = Request.CreateResponse(HttpStatusCode.Created, utilisateur);
-                
+
+                //Ajouter le chemin de l'utilisateur créé dans l'entête de requête.
                 message.Headers.Location = new Uri(Request.RequestUri +"/"+ utilisateur.Id);
                 return message;
             }
