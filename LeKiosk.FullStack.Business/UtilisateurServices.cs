@@ -33,9 +33,9 @@ namespace LeKiosk.FullStack.Business
         /// <param name="email"></param>
         /// <param name="pass"></param>
         /// <returns></returns>
-        public Utilisateur getListUtilisateur(string email, string password)
+        public Utilisateur getUtilisateur(string email, string password)
         {
-            return _utilisateurService.getListUtilisateurByEmailAndPasswword(email, password);
+            return _utilisateurService.getUtilisateurByEmailAndPasswword(email, password);
         }
         /// <summary>
         /// 

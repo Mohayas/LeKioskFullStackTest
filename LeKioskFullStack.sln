@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeKiosk.FullStack.Business"
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeKiosk.FullStack.Business.UnitTesting", "LeKiosk.FullStack.Business.UnitTesting\LeKiosk.FullStack.Business.UnitTesting.csproj", "{0E1512A3-13B6-4E05-9FDC-A857841E125C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{27A9DE92-D4AC-4777-AB9C-F9B64EB0908E} = {27A9DE92-D4AC-4777-AB9C-F9B64EB0908E}
+		{84C538A9-99FA-4C1B-ADFF-F2BB3772AF0E} = {84C538A9-99FA-4C1B-ADFF-F2BB3772AF0E}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
