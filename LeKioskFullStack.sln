@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeKiosk.FullStack.API", "LeKioskFullStack\LeKiosk.FullStack.API.csproj", "{610818CD-F1BB-4FC1-8120-59D2C933DFDD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{84C538A9-99FA-4C1B-ADFF-F2BB3772AF0E} = {84C538A9-99FA-4C1B-ADFF-F2BB3772AF0E}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeKiosk.FullStack.DAO", "LeKioskDAO\LeKiosk.FullStack.DAO.csproj", "{27A9DE92-D4AC-4777-AB9C-F9B64EB0908E}"
 EndProject
@@ -16,6 +19,32 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeKiosk.FullStack.Business.
 	ProjectSection(ProjectDependencies) = postProject
 		{27A9DE92-D4AC-4777-AB9C-F9B64EB0908E} = {27A9DE92-D4AC-4777-AB9C-F9B64EB0908E}
 		{84C538A9-99FA-4C1B-ADFF-F2BB3772AF0E} = {84C538A9-99FA-4C1B-ADFF-F2BB3772AF0E}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClientJS", "ClientJS", "{1921C73F-5C1F-49E0-A5F9-451080458EF2}"
+	ProjectSection(SolutionItems) = preProject
+		index.html = index.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{C2CA81CD-33BD-484E-B219-044607FE318A}"
+	ProjectSection(SolutionItems) = preProject
+		LeKioskFullStack\Scripts\bootstrap.js = LeKioskFullStack\Scripts\bootstrap.js
+		LeKioskFullStack\Scripts\bootstrap.min.js = LeKioskFullStack\Scripts\bootstrap.min.js
+		LeKioskFullStack\Scripts\jquery-1.10.2.intellisense.js = LeKioskFullStack\Scripts\jquery-1.10.2.intellisense.js
+		LeKioskFullStack\Scripts\jquery-1.10.2.js = LeKioskFullStack\Scripts\jquery-1.10.2.js
+		LeKioskFullStack\Scripts\jquery-1.10.2.min.js = LeKioskFullStack\Scripts\jquery-1.10.2.min.js
+		LeKioskFullStack\Scripts\jquery-1.10.2.min.map = LeKioskFullStack\Scripts\jquery-1.10.2.min.map
+		LeKioskFullStack\Scripts\kiosk.js = LeKioskFullStack\Scripts\kiosk.js
+		LeKioskFullStack\Scripts\modernizr-2.6.2.js = LeKioskFullStack\Scripts\modernizr-2.6.2.js
+		LeKioskFullStack\Scripts\respond.js = LeKioskFullStack\Scripts\respond.js
+		LeKioskFullStack\Scripts\respond.min.js = LeKioskFullStack\Scripts\respond.min.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{816F83EA-AE4D-48F2-9254-6C40F7F1EFE4}"
+	ProjectSection(SolutionItems) = preProject
+		LeKioskFullStack\Content\bootstrap.css = LeKioskFullStack\Content\bootstrap.css
+		LeKioskFullStack\Content\bootstrap.min.css = LeKioskFullStack\Content\bootstrap.min.css
+		LeKioskFullStack\Content\Site.css = LeKioskFullStack\Content\Site.css
 	EndProjectSection
 EndProject
 Global
@@ -43,6 +72,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C2CA81CD-33BD-484E-B219-044607FE318A} = {1921C73F-5C1F-49E0-A5F9-451080458EF2}
+		{816F83EA-AE4D-48F2-9254-6C40F7F1EFE4} = {1921C73F-5C1F-49E0-A5F9-451080458EF2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22C11ED0-966F-448B-96FC-1D488C8595B4}

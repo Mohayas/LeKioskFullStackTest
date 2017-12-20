@@ -261,6 +261,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LeKiosk.FullStack.Business\LeKiosk.FullStack.Business.csproj">
+      <Project>{84c538a9-99fa-4c1b-adff-f2bb3772af0e}</Project>
+      <Name>LeKiosk.FullStack.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LeKioskDAO\LeKiosk.FullStack.DAO.csproj">
       <Project>{27a9de92-d4ac-4777-ab9c-f9b64eb0908e}</Project>
       <Name>LeKiosk.FullStack.DAO</Name>

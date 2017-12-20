@@ -8,58 +8,55 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using LeKiosk.FullStack.Business;
 using LeKioskDAO;
 
 namespace LeKioskFullStack.Controllers
 {
     public class UtilisateursController : ApiController
     {
-        private KioskEntities db = new KioskEntities();
+        private UtilisateurServices _utilisateurServices;
 
-
-        // GET: api/Utilisateurs
-        
-        public IHttpActionResult GetUtilisateurs()
-        {                      
-            return Ok(db.Utilisateurs.ToList());
+        private void initialize()
+        {
+            _utilisateurServices = new UtilisateurServices();
         }
-
-
+        // GET: api/Utilisateurs
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public IHttpActionResult GetUtilisateurs()
+        {
+            initialize();
+            return Ok(_utilisateurServices.getListUtilisateurs());
+        }
         //La méthode Signin qui prends deux paramètres (email et password) renvois un objet 'Utilisateur'
         //si les information d'authentification sont correct ou un produit une erreur sinon.
-
         // GET: api/Utilisateurs
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [ResponseType(typeof(Utilisateur))]        
         public IHttpActionResult Signin(string email, string password)
         {
-            Utilisateur user = db.Utilisateurs.Where(u => u.email == email).Where(u => u.password == password).First();
-
+            Utilisateur user = _utilisateurServices.getUtilisateur(email,password);
             if (user == null)
-            {                
                 return NotFound();
-            }
-
             return Ok(user);
-
         }
-
-
-
         //La méthode Signup permet d'enregistrer un Utilisateur dans la base de données.
         //l'objet utilisateur est recupéré depuis la requête.
-
         // POST: api/Utilisateurs
         [HttpPost]
         [ResponseType(typeof(Utilisateur))]
         public HttpResponseMessage Signup(Utilisateur utilisateur)
         {
-
             try
             {
-                db.Utilisateurs.Add(utilisateur);
-                db.SaveChanges();
+                _utilisateurServices.addUtilisateur(utilisateur);
                 var message = Request.CreateResponse(HttpStatusCode.Created, utilisateur);
 
                 //Ajouter le chemin de l'utilisateur créé dans l'entête de requête.
@@ -70,12 +67,6 @@ namespace LeKioskFullStack.Controllers
             {
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
             }
-
         }
-
-
-            
-
-
     }
 }
