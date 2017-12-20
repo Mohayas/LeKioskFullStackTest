@@ -10,7 +10,11 @@
             data: { email: emailVal, password: passwordVal },
             dataType: "json",
             success: function (response) {  
-                window.location.replace("/Help");
+                $(".panel").fadeOut(100);                                
+                $(".row").append("<div class='jumbotron' style='text-align: center'><h1>Hello " +
+                    response.first_name + " " + response.last_name + "</h1 ></div >"); 
+                $("#signout").fadeIn(100);
+
             },
             error: function (response) {
                 alert(response.Message);
@@ -20,6 +24,7 @@
         e.preventDefault();
     });
 
+    $("#signout").fadeOut(100);
     $('#login-form-link').click(function (e) {
         $("#login-form").delay(100).fadeIn(100);
         $("#register-form").fadeOut(100);
