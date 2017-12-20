@@ -34,6 +34,11 @@
         
 <div class="container">
     <div class="row">
+	
+		<div class="alert alert-success alert-dismissable" id="success-panel">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<strong>You Signed up with Success!</strong> You may login now.
+		</div>
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-login">
                 <div class="panel-heading">
@@ -56,11 +61,7 @@
                                 </div>
                                 <div class="form-group">
                                     <input name="password" id="login-password" tabindex="2" class="form-control" placeholder="Password" type="password">
-                                </div>
-                                <div class="form-group text-center">
-                                    <input tabindex="3" class="" name="remember" id="remember" type="checkbox">
-                                    <label for="remember"> Remember Me</label>
-                                </div>
+                                </div>                                
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-sm-6 col-sm-offset-3">                                            
@@ -95,6 +96,15 @@
                                     <input name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required="" type="password">
                                 </div>
                                 <div class="form-group">
+								<div class="form-group" id="errors-panel" style="font-size:12px;color:red;">
+                                    <div class="row">                                        
+										<ul>
+										<li>You must fill all the fields</li>
+										<li>The email address must be valid </li>
+										<li>You must confirm the passworrd</li>
+										</ul>                                        
+                                    </div>
+                                </div>
                                     <div class="row">
                                         <div class="col-sm-6 col-sm-offset-3">
                                             <input name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now" type="submit">

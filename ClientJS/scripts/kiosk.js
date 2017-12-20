@@ -1,8 +1,6 @@
 ﻿$(function () {
-
-	
 		
-    //Login button click
+    //Login submit button click
     $('#login-submit').click(function (e) {
         var email = $('#login-email').val();
         var password = $('#login-password').val();
@@ -10,7 +8,7 @@
         e.preventDefault();
     });
 
-    //Register now button click
+    //Register now submit button click
     $('#register-submit').click(function (e) {
         var firstName = $('#firstname').val();
         var lastName = $('#lastname').val();
@@ -21,16 +19,20 @@
         if (validateSignupForm(firstName, lastName, email, password, passwordConfirm)) {
             var signupStaus = signup(firstName, lastName, email, password, password);
             if (signupStaus != -1) {
-                signin(email, password);
+			$("#success-panel").show();
+                $('#login-form-link').trigger( "click" );
             }
-        } else {
-            alert("NOT valide!");
-        }
-        //signin(email, password);
+        } else {            
+			$("#errors-panel").show();
+        }        
         e.preventDefault();
     });
-
-    $("#signout").fadeOut(100);
+	
+	//hide signout link	and errors panel
+    $("#signout").hide();
+    $("#errors-panel").hide();
+    $("#success-panel").hide();
+	
     //Switch to Login 
     $('#login-form-link').click(function (e) {
         $("#login-form").delay(100).fadeIn(100);
@@ -39,6 +41,7 @@
         $(this).addClass('active');
         e.preventDefault();
     });
+	
     //Switch to Register 
     $('#register-form-link').click(function (e) {
         $("#register-form").delay(100).fadeIn(100);
@@ -49,20 +52,20 @@
     });
 
 });
+
 var apiUrl="http://localhost:55185/";
+
 //utilisant ajax pour appeller la methode GET signin du WebAPI pour  l'identification ;
 function signin(email, password) {
     $.ajax({
         type: "GET",
         url: apiUrl+"api/Utilisateurs/",
         data: { email: email, password: password },
-        success: function (response) {
-		alert("ssss"+response);
+        success: function (response) {		
             $(".panel").fadeOut(100);
             $(".row").append("<div class='jumbotron' style='text-align: center'><h1>Hello " +
                 response.first_name + " " + response.last_name + "</h1 ></div >");
             $("#signout").fadeIn(100);
-
         },
         error: function (response) {
             alert(response.Message);

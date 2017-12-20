@@ -21,9 +21,10 @@ namespace LeKioskFullStack.Controllers
         {
             _utilisateurServices = new UtilisateurServices();
         }
-        // GET: api/Utilisateurs
+
         /// <summary>
-        /// 
+        /// returns a list of all users.
+        ///  GET: api/Utilisateurs
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -32,13 +33,16 @@ namespace LeKioskFullStack.Controllers
             initialize();
             return Ok(_utilisateurServices.getListUtilisateurs());
         }
-        //La méthode Signin qui prends deux paramètres (email et password) renvois un objet 'Utilisateur'
-        //si les information d'authentification sont correct ou un produit une erreur sinon.
-        // GET: api/Utilisateurs
+
+
         /// <summary>
-        /// 
+        /// La méthode Signin qui prends deux paramètres (email et password) renvois un objet 'Utilisateur'
+        /// si les information d'authentification sont correct ou un produit une erreur sinon.
+        ///  GET: api/Utilisateurs
         /// </summary>
-        /// <returns></returns>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns>Utilisateur</returns>
         [HttpGet]       
         public IHttpActionResult Signin(string email, string password)
         {
@@ -46,11 +50,16 @@ namespace LeKioskFullStack.Controllers
             Utilisateur user = _utilisateurServices.getUtilisateur(email,password);
             if (user == null)
                 return NotFound();
-            return Json(user); 
+            return Ok(user); 
         }
-        //La méthode Signup permet d'enregistrer un Utilisateur dans la base de données.
-        //l'objet utilisateur est recupéré depuis la requête.
-        // POST: api/Utilisateurs
+
+        /// <summary>
+        ///La méthode Signup permet d'enregistrer un Utilisateur 
+        ///l'objet utilisateur est recupéré depuis la requête.
+        /// POST: api/Utilisateurs
+        /// </summary>
+        /// <param name="utilisateur"></param>
+        /// <returns></returns>
         [HttpPost]
         [ResponseType(typeof(Utilisateur))]
         public HttpResponseMessage Signup(Utilisateur utilisateur)

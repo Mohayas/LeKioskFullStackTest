@@ -1,0 +1,16 @@
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\bin\Debug\LeKiosk.FullStack.DAO.UnitTest.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\bin\Debug\LeKiosk.FullStack.DAO.UnitTest.pdb
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\obj\Debug\LeKiosk.FullStack.DAO.UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\obj\Debug\LeKiosk.FullStack.DAO.UnitTest.csproj.CoreCompileInputs.cache
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\obj\Debug\LeKiosk.FullStack.DAO.UnitTest.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.DAO.UnitTest\obj\Debug\LeKiosk.FullStack.DAO.UnitTest.pdb

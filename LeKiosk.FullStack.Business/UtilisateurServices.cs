@@ -48,9 +48,10 @@ namespace LeKiosk.FullStack.Business
         /// <returns></returns>
         public Utilisateur addUtilisateur(Utilisateur utilisateur)
         {
+            
             if (utilisateur == null
                 || string.IsNullOrEmpty(utilisateur.email)
-                || string.IsNullOrEmpty(utilisateur.password)
+                || string.IsNullOrEmpty(utilisateur.password)                
                 ) return null;
             return _utilisateurService.addUtilisateur(utilisateur);
         }

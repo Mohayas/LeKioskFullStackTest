@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeKiosk.FullStack.Business.
 		{84C538A9-99FA-4C1B-ADFF-F2BB3772AF0E} = {84C538A9-99FA-4C1B-ADFF-F2BB3772AF0E}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeKiosk.FullStack.DAO.UnitTest", "LeKiosk.FullStack.DAO.UnitTest\LeKiosk.FullStack.DAO.UnitTest.csproj", "{3B129AC4-9164-4DED-9429-5C0B6D2AD1AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{0E1512A3-13B6-4E05-9FDC-A857841E125C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E1512A3-13B6-4E05-9FDC-A857841E125C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E1512A3-13B6-4E05-9FDC-A857841E125C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B129AC4-9164-4DED-9429-5C0B6D2AD1AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B129AC4-9164-4DED-9429-5C0B6D2AD1AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B129AC4-9164-4DED-9429-5C0B6D2AD1AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B129AC4-9164-4DED-9429-5C0B6D2AD1AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
