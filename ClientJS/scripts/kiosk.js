@@ -1,5 +1,7 @@
 ﻿$(function () {
-    
+
+	
+		
     //Login button click
     $('#login-submit').click(function (e) {
         var email = $('#login-email').val();
@@ -47,15 +49,15 @@
     });
 
 });
-
+var apiUrl="http://localhost:55185/";
 //utilisant ajax pour appeller la methode GET signin du WebAPI pour  l'identification ;
 function signin(email, password) {
     $.ajax({
         type: "GET",
-        url: "api/Utilisateurs/",
+        url: apiUrl+"api/Utilisateurs/",
         data: { email: email, password: password },
-        dataType: "json",
         success: function (response) {
+		alert("ssss"+response);
             $(".panel").fadeOut(100);
             $(".row").append("<div class='jumbotron' style='text-align: center'><h1>Hello " +
                 response.first_name + " " + response.last_name + "</h1 ></div >");
@@ -73,9 +75,8 @@ function signin(email, password) {
 function signup(firstName, lastName, email, password) {
     $.ajax({
         type: "POST",
-        url: "api/Utilisateurs/",
+        url: apiUrl+"api/Utilisateurs/",
         data: { first_name: firstName, last_name: lastName, email: email, password: password },
-        dataType: "json",
         success: function (response) {
             return 1;
 

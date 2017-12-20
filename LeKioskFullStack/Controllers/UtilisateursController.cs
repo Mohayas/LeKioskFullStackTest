@@ -26,6 +26,7 @@ namespace LeKioskFullStack.Controllers
         /// 
         /// </summary>
         /// <returns></returns>
+        [HttpGet]
         public IHttpActionResult GetUtilisateurs()
         {
             initialize();
@@ -38,14 +39,14 @@ namespace LeKioskFullStack.Controllers
         /// 
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
-        [ResponseType(typeof(Utilisateur))]        
+        [HttpGet]       
         public IHttpActionResult Signin(string email, string password)
         {
+            initialize();
             Utilisateur user = _utilisateurServices.getUtilisateur(email,password);
             if (user == null)
                 return NotFound();
-            return Ok(user);
+            return Json(user); 
         }
         //La méthode Signup permet d'enregistrer un Utilisateur dans la base de données.
         //l'objet utilisateur est recupéré depuis la requête.
@@ -54,11 +55,11 @@ namespace LeKioskFullStack.Controllers
         [ResponseType(typeof(Utilisateur))]
         public HttpResponseMessage Signup(Utilisateur utilisateur)
         {
+            initialize();
             try
             {
                 _utilisateurServices.addUtilisateur(utilisateur);
                 var message = Request.CreateResponse(HttpStatusCode.Created, utilisateur);
-
                 //Ajouter le chemin de l'utilisateur créé dans l'entête de requête.
                 message.Headers.Location = new Uri(Request.RequestUri + "/" + utilisateur.Id);
                 return message;

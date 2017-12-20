@@ -1,0 +1,12 @@
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKioskDAO\bin\Debug\LeKioskDAO.dll.config
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKioskDAO\bin\Debug\LeKioskDAO.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKioskDAO\bin\Debug\LeKioskDAO.pdb
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKioskDAO\bin\Debug\EntityFramework.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKioskDAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKioskDAO\bin\Debug\EntityFramework.xml
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKioskDAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKioskDAO\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKioskDAO\obj\Debug\LeKiosk.FullStack.DAO.csprojResolveAssemblyReference.cache
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKioskDAO\obj\Debug\LeKiosk.FullStack.DAO.csproj.CoreCompileInputs.cache
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKioskDAO\obj\Debug\LeKioskDAO.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKioskDAO\obj\Debug\LeKioskDAO.pdb

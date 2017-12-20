@@ -1,0 +1,12 @@
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.Business\bin\Debug\LeKiosk.FullStack.Business.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.Business\bin\Debug\LeKiosk.FullStack.Business.pdb
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.Business\bin\Debug\LeKioskDAO.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.Business\bin\Debug\EntityFramework.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.Business\bin\Debug\LeKioskDAO.pdb
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.Business\bin\Debug\LeKioskDAO.dll.config
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.Business\bin\Debug\EntityFramework.xml
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.Business\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.Business\obj\Debug\LeKiosk.FullStack.Business.csprojResolveAssemblyReference.cache
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.Business\obj\Debug\LeKiosk.FullStack.Business.csproj.CoreCompileInputs.cache
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.Business\obj\Debug\LeKiosk.FullStack.Business.dll
+C:\Users\mohayas\Documents\GitHub\LeKioskFullStackTest\LeKiosk.FullStack.Business\obj\Debug\LeKiosk.FullStack.Business.pdb
