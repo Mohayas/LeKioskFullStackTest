@@ -1,0 +1,12 @@
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskDAO\bin\Debug\LeKioskDAO.dll.config
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskDAO\bin\Debug\LeKioskDAO.dll
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskDAO\bin\Debug\LeKioskDAO.pdb
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskDAO\bin\Debug\EntityFramework.dll
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskDAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskDAO\bin\Debug\EntityFramework.xml
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskDAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskDAO\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskDAO\obj\Debug\LeKioskDAO.csprojResolveAssemblyReference.cache
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskDAO\obj\Debug\LeKioskDAO.csproj.CoreCompileInputs.cache
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskDAO\obj\Debug\LeKioskDAO.dll
+C:\Users\mohayas\source\repos\LeKioskFullStack\LeKioskDAO\obj\Debug\LeKioskDAO.pdb
