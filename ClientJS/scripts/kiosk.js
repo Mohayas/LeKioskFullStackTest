@@ -1,6 +1,12 @@
 ﻿$(function () {
 		
     //Login submit button click
+    $('#signout').click(function (e) {		
+        $(".panel").fadeIn(100);
+		$("#signout").fadeOut(100);
+		$("#display-success").append("<div class='alert alert-success alert-dismissable' ><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>You're Signed out!</strong> </div>");
+        e.preventDefault();
+    });	 //Login submit button click
     $('#login-submit').click(function (e) {
         var email = $('#login-email').val();
         var password = $('#login-password').val();
