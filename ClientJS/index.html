@@ -33,12 +33,8 @@
     <div class="container body-content">
         
 <div class="container">
-    <div class="row">
-	
-		<div class="alert alert-success alert-dismissable" id="success-panel">
-				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-			<strong>You Signed up with Success!</strong> You may login now.
-		</div>
+    <div class="row" >
+		<div id="display-success" class="col-md-6 col-md-offset-3"></div>		
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-login">
                 <div class="panel-heading">
@@ -73,7 +69,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="text-center">
-                                                <a href="" tabindex="5" class="forgot-password">Forgot Password?</a>
+                                                <a href="" tabindex="5" class="forgot-password" id="forgot-password-link">Forgot Password?</a>
                                             </div>
                                         </div>
                                     </div>
@@ -96,7 +92,7 @@
                                     <input name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required="" type="password">
                                 </div>
                                 <div class="form-group">
-								<div class="form-group" id="errors-panel" style="font-size:12px;color:red;">
+								<div class="form-group" id="errors-panel" style="font-size:12px;color:red;display: none;">
                                     <div class="row">                                        
 										<ul>
 										<li>You must fill all the fields</li>
@@ -112,6 +108,16 @@
                                     </div>
                                 </div>
                             </form>
+							<form id="forgot-form" action="" method="post" role="form" style="display: none;">
+                                <div class="form-group">
+                                    <input name="email" id="forgot-email" tabindex="1" class="form-control" placeholder="email" value="" type="text">
+                                </div>
+								<div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <input name="forgot-submit" id="forgot-submit" tabindex="4" class="form-control btn btn-register" value="Send me new password" type="submit">
+                                        </div>
+                                    </div>
+							</form>	
                         </div>
                     </div>
                 </div>

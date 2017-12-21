@@ -78,5 +78,16 @@ namespace LeKioskFullStack.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
             }
         }
+
+        [HttpGet]
+        public IHttpActionResult forgotPassword(string email)
+        {
+            initialize();
+            Utilisateur user = _utilisateurServices.getUtilisateur(email);
+            if (user == null)
+                return NotFound();
+            return Ok(true);
+        }
+
     }
 }

@@ -19,15 +19,22 @@ namespace LeKiosk.FullStack.Business
             return _utilisateurService.getListUtilisateurs();
         }
         /// <summary>
-        /// 
+        /// a method that check if the email existes, and send the password to it .
+        /// returns null if the email doesn't existe.
         /// </summary>
         /// <param name="email"></param>
-        /// <returns></returns>
+        /// <returns>Utilistateur</returns>
         public Utilisateur getUtilisateur(string email)
         {
             if (string.IsNullOrEmpty(email))
                 return null;
-            return _utilisateurService.getUtilisateurByEmail(email);
+            Utilisateur utilisateur= _utilisateurService.getUtilisateurByEmail(email);
+            if (utilisateur != null)
+            {
+                MailingServices mailingServices = new MailingServices();
+                mailingServices.sendForgettenEmail(email, utilisateur.password);
+            }
+            return utilisateur;
         }
         /// <summary>
         /// 
@@ -42,7 +49,7 @@ namespace LeKiosk.FullStack.Business
             return _utilisateurService.getUtilisateurByEmailAndPasswword(email, password);
         }
         /// <summary>
-        /// 
+        /// add new user method.
         /// </summary>
         /// <param name="utilisateur">a user object to add</param>
         /// <returns></returns>
@@ -55,5 +62,8 @@ namespace LeKiosk.FullStack.Business
                 ) return null;
             return _utilisateurService.addUtilisateur(utilisateur);
         }
+
+
+
     }
 }

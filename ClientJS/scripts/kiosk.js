@@ -6,8 +6,7 @@
         var password = $('#login-password').val();
         signin(email, password);
         e.preventDefault();
-    });
-
+    });	
     //Register now submit button click
     $('#register-submit').click(function (e) {
         var firstName = $('#firstname').val();
@@ -19,7 +18,7 @@
         if (validateSignupForm(firstName, lastName, email, password, passwordConfirm)) {
             var signupStaus = signup(firstName, lastName, email, password, password);
             if (signupStaus != -1) {
-			$("#success-panel").show();
+			$("#display-success").append("<div class='alert alert-success alert-dismissable' ><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>You Signed up with Success!</strong> You may login now.</div>");
                 $('#login-form-link').trigger( "click" );
             }
         } else {            
@@ -28,15 +27,18 @@
         e.preventDefault();
     });
 	
-	//hide signout link	and errors panel
-    $("#signout").hide();
-    $("#errors-panel").hide();
-    $("#success-panel").hide();
+	//forgot password submit button click
+    $('#forgot-submit').click(function (e) {
+        var email = $('#forgot-email').val();        
+        sendPassword(email);		
+        e.preventDefault();
+    });
 	
     //Switch to Login 
     $('#login-form-link').click(function (e) {
         $("#login-form").delay(100).fadeIn(100);
         $("#register-form").fadeOut(100);
+		$("#forgot-form").fadeOut(100);
         $('#register-form-link').removeClass('active');
         $(this).addClass('active');
         e.preventDefault();
@@ -46,10 +48,18 @@
     $('#register-form-link').click(function (e) {
         $("#register-form").delay(100).fadeIn(100);
         $("#login-form").fadeOut(100);
+		$("#forgot-form").fadeOut(100);
         $('#login-form-link').removeClass('active');
         $(this).addClass('active');
         e.preventDefault();
     });
+	//Switch to forgot password
+    $('#forgot-password-link').click(function (e) {
+	$("#register-form").fadeOut(100);
+	$("#login-form").fadeOut(100);
+	$("#forgot-form").fadeIn(100);
+	e.preventDefault();
+	});
 
 });
 
@@ -63,7 +73,7 @@ function signin(email, password) {
         data: { email: email, password: password },
         success: function (response) {		
             $(".panel").fadeOut(100);
-            $(".row").append("<div class='jumbotron' style='text-align: center'><h1>Hello " +
+            $(".row").html("<div class='jumbotron' style='text-align: center'><h1>Hello " +
                 response.first_name + " " + response.last_name + "</h1 ></div >");
             $("#signout").fadeIn(100);
         },
@@ -102,6 +112,21 @@ function validateSignupForm(firstName, lastName, email, password, confirmPasswor
     if (password != confirmPassword) return false;
     return true;
 
+}
+function sendPassword(email){
+    $.ajax({
+        type: "GET",
+        url: apiUrl+"api/Utilisateurs/",
+        data: { email: email},
+        success: function (response) {
+            $("#display-success").html("<div class='alert alert-success alert-dismissable' ><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>An email sent to your address with password!</strong> You may check your Inbox or Spam folder now.</div>");		
+			console.log(response);
+        },
+        error: function (response) {            
+		$("#display-success").html("<div class='alert alert-danger alert-dismissable' ><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>Error!</strong> This Email doesn't existe.</div>");
+            console.log(response);            
+        }
+    });
 }
 
 
