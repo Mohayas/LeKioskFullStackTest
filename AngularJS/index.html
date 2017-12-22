@@ -8,8 +8,10 @@
     <title>Login</title>		
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/site.css" rel="stylesheet" />
+	<script src="scripts/angular.min.js" type="text/javascript"></script>
+	<script src="scripts/utilisateur-module.js" type="text/javascript"></script>
 </head>
-<body>
+<body ng-app="kioskApp" ng-controller="utilisateurController">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -47,17 +49,17 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form id="login-form" action="" method="post" role="form" style="display: block;">
+                            <form name="login-form" id="login-form" action="" method="post" role="form" style="display: block;">
                                 <div class="form-group">
-                                    <input name="email" id="login-email" tabindex="1" class="form-control" placeholder="email" value="" type="text">
+                                    <input name="email" id="login-email" tabindex="1" class="form-control" placeholder="email" ng-model="user.email" type="email">									
                                 </div>
                                 <div class="form-group">
-                                    <input name="password" id="login-password" tabindex="2" class="form-control" placeholder="Password" type="password">
+                                    <input name="password" id="login-password" tabindex="2" class="form-control" placeholder="Password" ng-model="user.password" type="password">
                                 </div>                                
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-sm-6 col-sm-offset-3">                                            
-                                            <input name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In" type="submit">
+                                            <input name="login-submit" id="login-submit" ng-click="signin()" tabindex="4" class="form-control btn btn-login" value="Log In" type="submit">
                                         </div>
                                     </div>
                                 </div>
@@ -73,19 +75,19 @@
                             </form>
                             <form id="register-form" action="" method="post" role="form" style="display: none;">
                                 <div class="form-group">
-                                    <input name="first_name" id="firstname" tabindex="1" class="form-control" placeholder="First name" value="" required="" type="text">
+                                    <input name="first_name" id="firstname" tabindex="1" class="form-control" placeholder="First name" ng-model="user.firstName" required="" type="text">
                                 </div>
                                 <div class="form-group">
-                                    <input name="last_name" id="lastname" tabindex="1" class="form-control" placeholder="Last name" value="" required="" type="text">
+                                    <input name="last_name" id="lastname" tabindex="1" class="form-control" placeholder="Last name" ng-model="user.lastName" required="" type="text">
                                 </div>
                                 <div class="form-group">
-                                    <input name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="" required="" type="email">
+                                    <input name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" ng-model="user.email" required="" type="email">
                                 </div>
                                 <div class="form-group">
-                                    <input name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="" type="password">
+                                    <input name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="" ng-model="user.password" type="password">
                                 </div>
                                 <div class="form-group">
-                                    <input name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required="" type="password">
+                                    <input name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required="" ng-model="user.confirmPassword" type="password">
                                 </div>
                                 <div class="form-group">
 								<div class="form-group" id="errors-panel" style="font-size:12px;color:red;display: none;">
@@ -126,6 +128,7 @@
     <script src="scripts/bootstrap.js"></script>
     <script src="scripts/respond.js"></script>
     <script src="scripts/kiosk.js" type="text/javascript"></script>
+    
 
 </body>
 </html>

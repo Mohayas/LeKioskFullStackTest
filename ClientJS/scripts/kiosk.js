@@ -2,10 +2,11 @@
 		
     //Login submit button click
     $('#signout').click(function (e) {		
-        $(".panel").fadeIn(100);
+        $("#main_panel").show();
 		$("#signout").fadeOut(100);
+		$("#displayName").hide();
 		$("#display-success").append("<div class='alert alert-success alert-dismissable' ><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>You're Signed out!</strong> </div>");
-        e.preventDefault();
+		e.preventDefault();
     });	 //Login submit button click
     $('#login-submit').click(function (e) {
         var email = $('#login-email').val();
@@ -79,7 +80,7 @@ function signin(email, password) {
         data: { email: email, password: password },
         success: function (response) {		
             $(".panel").fadeOut(100);
-            $(".row").html("<div class='jumbotron' style='text-align: center'><h1>Hello " +
+            $("#displayName").append("<div class='jumbotron' style='text-align: center'><h1>Hello " +
                 response.first_name + " " + response.last_name + "</h1 ></div >");
             $("#signout").fadeIn(100);
         },
