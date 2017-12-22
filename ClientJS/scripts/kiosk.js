@@ -112,7 +112,7 @@ function validateSignupForm(firstName, lastName, email, password, confirmPasswor
 	if (password != confirmPassword) return false;
 	return true;
 }
-//recover password 
+
 function sendPassword(email) {
 	$.ajax({
 		type: "GET"
@@ -128,6 +128,7 @@ function sendPassword(email) {
 			$("#display-success").html(
 				"<div class='alert alert-danger alert-dismissable' ><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>Error!</strong> This Email doesn't existe.</div>"
 			);
+			console.log(response);
 		}
 	});
 }
