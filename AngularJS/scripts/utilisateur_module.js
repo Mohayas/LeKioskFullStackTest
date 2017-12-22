@@ -24,7 +24,7 @@ app.controller("utilisateurController", function($scope,$http) {
          url : "http://localhost:55185/api/Utilisateurs/",         
 		params: { first_name: $scope.user.firstName, last_name: $scope.user.lastName, email: $scope.user.email, password: $scope.user.password }		
     }).then(function mySuccess(response) {
-      $("#display-success").append("<div class='alert alert-success alert-dismissable' ><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>You Signed up with Success!</strong> You may login now.</div>");
+				$("#display-success").append("<div class='alert alert-success alert-dismissable' ><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>You Signed up with Success!</strong> You may login now.</div>");
                 $('#login-form-link').trigger( "click" );
     }, function myError(response) {
         $("#errors-panel").show();		

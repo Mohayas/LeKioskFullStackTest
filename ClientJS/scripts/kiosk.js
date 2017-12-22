@@ -73,7 +73,10 @@ function signin(email, password) {
 	$.ajax({
 		type: "GET"
 		, url: apiUrl + "api/Utilisateurs/"
-		, data: { email: email, password: password }
+		, data: {
+			email: email
+			, password: password
+		}
 		, success: function (response) {
 			$(".panel").fadeOut(100);
 			$("#displayName").append("<div class='jumbotron' style='text-align: center'><h1>Hello " + response.first_name + " " + response.last_name +
@@ -81,7 +84,9 @@ function signin(email, password) {
 			$("#signout").fadeIn(100);
 		}
 		, error: function (response) {
-			alert(response.Message);
+			$("#display-success").append(
+				"<div class='alert alert-alert alert-dismissable' ><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>Error!</strong> Email/Password combination incorrect.</div>"
+			);
 			console.log(response);
 		}
 	});
@@ -91,12 +96,19 @@ function signup(firstName, lastName, email, password) {
 	$.ajax({
 		type: "POST"
 		, url: apiUrl + "api/Utilisateurs/"
-		, data: { first_name: firstName, last_name: lastName, email: email, password: password }
+		, data: {
+			first_name: firstName
+			, last_name: lastName
+			, email: email
+			, password: password
+		}
 		, success: function (response) {
 			return 1;
 		}
 		, error: function (response) {
-			alert(response.Message);
+			$("#display-success").append(
+				"<div class='alert alert-danger alert-dismissable' ><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>Error</strong> Something went wrong.</div>"
+			);
 			console.log(response);
 			return -1;
 		}
@@ -117,7 +129,9 @@ function sendPassword(email) {
 	$.ajax({
 		type: "GET"
 		, url: apiUrl + "api/Utilisateurs/"
-		, data: { email: email }
+		, data: {
+			email: email
+		}
 		, success: function (response) {
 			$("#display-success").html(
 				"<div class='alert alert-success alert-dismissable' ><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>An email sent to your address with password!</strong> You may check your Inbox or Spam folder now.</div>"
