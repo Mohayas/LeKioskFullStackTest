@@ -8,13 +8,19 @@ namespace LeKiosk.FullStack.DAO.UnitTest
     [TestClass]
     public class UtilisateurDALTest
     {
+        //un objet de la classs UtilisateurDAL qu'on va tester
         UtilisateurDAL utilisateurDAL;
-
+        /// <summary>
+        /// //l'initialistation de l'objet utilisateurDAL
+        /// </summary>
         private void initialize()
         {
             utilisateurDAL = new UtilisateurDAL();
         }
-
+        /// <summary>
+        /// tester la methode qui renvois tous les utilisateurs
+        /// success
+        /// </summary>
         [TestMethod]
         public void getListUtilisateursSuccess()
         {
@@ -23,7 +29,8 @@ namespace LeKiosk.FullStack.DAO.UnitTest
             Assert.AreNotEqual(listUsers.Count, 0);
         }
         /// <summary>
-        /// Test Methode getListUtilisateurs when Failed
+        /// tester la methode qui renvois tous les utilisateurs
+        /// faild
         /// </summary>
         [TestMethod]
         public void getListUtilisateursFailed()
@@ -33,7 +40,8 @@ namespace LeKiosk.FullStack.DAO.UnitTest
             Assert.AreEqual(listUsers.Count, 0);
         }
         /// <summary>
-        /// 
+        /// tester la methode qui renvois un utilisateur par son email
+        /// success
         /// </summary>
         [TestMethod]
         public void getUtilisateurbyEmailSuccess()
@@ -43,7 +51,8 @@ namespace LeKiosk.FullStack.DAO.UnitTest
             Assert.IsNotNull(user);
         }
         /// <summary>
-        /// 
+        /// tester la methode qui renvois un utilisateur par son email
+        /// faild
         /// </summary>
         [TestMethod]
         public void getUtilisateurbyEmailFailed()
@@ -53,17 +62,19 @@ namespace LeKiosk.FullStack.DAO.UnitTest
             Assert.IsNull(user);
         }
         /// <summary>
-        /// 
+        /// tester la methode qui renvois un utilisateur par son email et password
+        /// success
         /// </summary>
         [TestMethod]
         public void getUtilisateurbyEmailandPasswordSuccess()
         {
             initialize();
-            Utilisateur user = utilisateurDAL.getUtilisateurByEmailAndPasswword("asas.mohamed@gmail.com", "p@ssW0rd");
+            Utilisateur user = utilisateurDAL.getUtilisateurByEmailAndPasswword("mo@yas.com", "aaa");
             Assert.IsNotNull(user);
         }
         /// <summary>
-        /// 
+        /// tester la methode qui renvois un utilisateur par son email et password
+        /// faild
         /// </summary>
         [TestMethod]
         public void getUtilisateurbyEmailandPasswordFailed()

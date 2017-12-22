@@ -35,7 +35,7 @@ namespace LeKioskDAO
         /// <param name="email"></param>
         /// <param name="pass"></param>
         /// <returns>Utilisateur</returns>
-        public Utilisateur getUtilisateurByEmailAndPasswword(string email,string pass)
+        public Utilisateur getUtilisateurByEmailAndPasswword(string email, string pass)
         {
             return DB.Utilisateurs.Where(u => u.email == email && u.password == pass).First();
         }

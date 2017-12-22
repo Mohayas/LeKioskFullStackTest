@@ -25,7 +25,7 @@ namespace LeKiosk.FullStack.Business.UnitTesting
         {
             initialize();
             List<Utilisateur> listUsers = _utilisateurServices.getListUtilisateurs();
-            Assert.AreNotEqual(listUsers.Count,0);
+            Assert.AreNotEqual(listUsers.Count, 0);
         }
         /// <summary>
         /// Test Methode getListUtilisateurs when Failed
@@ -38,17 +38,19 @@ namespace LeKiosk.FullStack.Business.UnitTesting
             Assert.AreEqual(listUsers.Count, 0);
         }
         /// <summary>
-        /// 
+        /// Test Methode getUtilisateur by its eamil
+        /// success
         /// </summary>
         [TestMethod]
         public void getUtilisateurbyEmailSuccess()
         {
             initialize();
-            Utilisateur user = _utilisateurServices.getUtilisateur("asas.mohamed@gmail.com");
+            Utilisateur user = _utilisateurServices.getUtilisateur("mo@yas.com");
             Assert.IsNotNull(user);
         }
         /// <summary>
-        /// 
+        ///  Test Methode getUtilisateur by its email
+        ///  Failed
         /// </summary>
         [TestMethod]
         public void getUtilisateurbyEmailFailed()
@@ -58,23 +60,25 @@ namespace LeKiosk.FullStack.Business.UnitTesting
             Assert.IsNull(user);
         }
         /// <summary>
-        /// 
+        ///  Test Methode getUtilisateur by its email and password
+        ///  success
         /// </summary>
         [TestMethod]
         public void getUtilisateurbyEmailandPasswordSuccess()
         {
             initialize();
-            Utilisateur user = _utilisateurServices.getUtilisateur("asas.mohamed@gmail.com","p@ssW0rd");
+            Utilisateur user = _utilisateurServices.getUtilisateur("asas.mohamed@gmail.com", "p@ssW0rd");
             Assert.IsNotNull(user);
         }
         /// <summary>
-        /// 
+        ///  Test Methode getUtilisateur by its email password
+        ///  faild
         /// </summary>
         [TestMethod]
         public void getUtilisateurbyEmailandPasswordFailed()
         {
             initialize();
-            Utilisateur user = _utilisateurServices.getUtilisateur("something@gmail.com","BadPassword");
+            Utilisateur user = _utilisateurServices.getUtilisateur("something@gmail.com", "BadPassword");
             Assert.IsNull(user);
         }
     }

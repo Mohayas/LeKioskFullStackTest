@@ -11,30 +11,30 @@ namespace LeKiosk.FullStack.Business
     class MailingServices
     {
 
-     public void sendForgettenEmail(string email, string password) { 
-    var fromAddress = new MailAddress("assass.mohamed@gmail.com", "From Name");
-    var toAddress = new MailAddress(email, "To Name");
-    const string fromPassword = "Lufy@100";
-    const string subject = "Important";
-     string body = "You Forgot Your Password , Here it is : " + password+" ,";
-
-    var smtp = new SmtpClient
-    {
-        Host = "smtp.gmail.com",
-        Port = 587,
-        EnableSsl = true,
-        DeliveryMethod = SmtpDeliveryMethod.Network,
-        Credentials = new NetworkCredential(fromAddress.Address, fromPassword),
-        Timeout = 20000
-    };
-    using (var message = new MailMessage(fromAddress, toAddress)
-    {
-        Subject = subject,
-        Body = body
-        })
+        public void sendForgettenEmail(string email, string password)
         {
-    smtp.Send(message);
-     }
+            var fromAddress = new MailAddress("valid_gmail_account", "LeKiosk");
+            var toAddress = new MailAddress(email, "To Name");
+            const string fromPassword = "valid_password@100";
+            const string subject = "Important";
+            string body = "You Forgot Your Password , Here it is : " + password + " ,";
+            var smtp = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                Credentials = new NetworkCredential(fromAddress.Address, fromPassword),
+                Timeout = 20000
+            };
+            using (var message = new MailMessage(fromAddress, toAddress)
+            {
+                Subject = subject,
+                Body = body
+            })
+            {
+                smtp.Send(message);
+            }
         }
     }
 }

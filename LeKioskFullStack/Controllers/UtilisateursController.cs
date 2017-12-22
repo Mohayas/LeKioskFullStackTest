@@ -43,14 +43,14 @@ namespace LeKioskFullStack.Controllers
         /// <param name="email"></param>
         /// <param name="password"></param>
         /// <returns>Utilisateur</returns>
-        [HttpGet]       
+        [HttpGet]
         public IHttpActionResult Signin(string email, string password)
         {
             initialize();
-            Utilisateur user = _utilisateurServices.getUtilisateur(email,password);
+            Utilisateur user = _utilisateurServices.getUtilisateur(email, password);
             if (user == null)
                 return NotFound();
-            return Ok(user); 
+            return Ok(user);
         }
 
         /// <summary>
@@ -79,6 +79,12 @@ namespace LeKioskFullStack.Controllers
             }
         }
 
+        /// <summary>
+        /// verifier si l'existance d'un email et renvois l'utilisateur correspondant et l'email perdu par mail
+        /// 
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
         [HttpGet]
         public IHttpActionResult forgotPassword(string email)
         {
