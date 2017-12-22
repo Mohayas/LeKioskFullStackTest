@@ -1,134 +1,108 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Login</title>		
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/site.css" rel="stylesheet" />
-	<script src="scripts/angular.min.js" type="text/javascript"></script>
-	<script src="scripts/utilisateur-module.js" type="text/javascript"></script>
-</head>
-<body ng-app="kioskApp" ng-controller="utilisateurController">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">LeKIOSK</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" id="signout" style="display:none;">Sign out</a></li>                    
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">        
-<div class="container">
-    <div class="row" >
-		<div id="display-success" class="col-md-6 col-md-offset-3"></div>		
-        <div class="col-md-6 col-md-offset-3">
-            <div class="panel panel-login">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <a href="#" class="active" id="login-form-link">Login</a>
-                        </div>
-                        <div class="col-xs-6">
-                            <a href="#" id="register-form-link">Register</a>
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <form name="login-form" id="login-form" action="" method="post" role="form" style="display: block;">
-                                <div class="form-group">
-                                    <input name="email" id="login-email" tabindex="1" class="form-control" placeholder="email" ng-model="user.email" type="email">									
-                                </div>
-                                <div class="form-group">
-                                    <input name="password" id="login-password" tabindex="2" class="form-control" placeholder="Password" ng-model="user.password" type="password">
-                                </div>                                
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-sm-6 col-sm-offset-3">                                            
-                                            <input name="login-submit" id="login-submit" ng-click="signin()" tabindex="4" class="form-control btn btn-login" value="Log In" type="submit">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="text-center">
-                                                <a href="" tabindex="5" class="forgot-password" id="forgot-password-link">Forgot Password?</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>																
-                            </form>
-                            <form id="register-form" action="" method="post" role="form" style="display: none;">
-                                <div class="form-group">
-                                    <input name="first_name" id="firstname" tabindex="1" class="form-control" placeholder="First name" ng-model="user.firstName" required="" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <input name="last_name" id="lastname" tabindex="1" class="form-control" placeholder="Last name" ng-model="user.lastName" required="" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <input name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" ng-model="user.email" required="" type="email">
-                                </div>
-                                <div class="form-group">
-                                    <input name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="" ng-model="user.password" type="password">
-                                </div>
-                                <div class="form-group">
-                                    <input name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required="" ng-model="user.confirmPassword" type="password">
-                                </div>
-                                <div class="form-group">
-								<div class="form-group" id="errors-panel" style="font-size:12px;color:red;display: none;">
-                                    <div class="row">                                        
-										<ul>
-										<li>You must fill all the fields</li>
-										<li>The email address must be valid </li>
-										<li>You must confirm the passworrd</li>
-										</ul>                                        
-                                    </div>
-                                </div>
-                                    <div class="row">
-                                        <div class="col-sm-6 col-sm-offset-3">
-                                            <input name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now" type="submit">
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-							<form id="forgot-form" action="" method="post" role="form" style="display: none;">
-                                <div class="form-group">
-                                    <input name="email" id="forgot-email" tabindex="1" class="form-control" placeholder="email" value="" type="text">
-                                </div>
-								<div class="row">
-                                        <div class="col-sm-6 col-sm-offset-3">
-                                            <input name="forgot-submit" id="forgot-submit" tabindex="4" class="form-control btn btn-register" value="Send me new password" type="submit">
-                                        </div>
-                                    </div>
-							</form>	
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-    <script src="scripts/jquery-1.10.2.js"></script>
-    <script src="scripts/bootstrap.js"></script>
-    <script src="scripts/respond.js"></script>
-    <script src="scripts/kiosk.js" type="text/javascript"></script>
-    
 
-</body>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Login</title>
+		<link href="css/bootstrap.css" rel="stylesheet" />
+		<link href="css/site.css" rel="stylesheet" />
+		<script src="scripts/angular.min.js" type="text/javascript"></script>
+		<script src="scripts/utilisateur_module.js" type="text/javascript"></script>
+	</head>
+
+	<body ng-app="kioskApp" ng-controller="utilisateurController">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> <a class="navbar-brand" href="/">LeKIOSK</a> </div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#" id="signout" style="display:none;">Sign out</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container body-content">
+			<div class="container">
+				<div class="row">
+					<div id="display-success" class="col-md-6 col-md-offset-3"></div>
+					<div class="col-md-6 col-md-offset-3">
+						<div class="panel panel-login">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-xs-6"> <a href="#" class="active" id="login-form-link">Login</a> </div>
+									<div class="col-xs-6"> <a href="#" id="register-form-link">Register</a> </div>
+								</div>
+								<hr> </div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-lg-12">
+										<form name="login-form" id="login-form" action="" method="post" role="form" style="display: block;">
+											<div class="form-group"> <input name="email" id="login-email" tabindex="1" class="form-control" placeholder="email" ng-model="user.email" type="email"> </div>
+											<div class="form-group">
+											<input name="password" id="login-password" tabindex="2" class="form-control" placeholder="Password" ng-model="user.password" type="password"> </div>
+											<div
+											 class="form-group">
+												<div class="row">
+													<div class="col-sm-6 col-sm-offset-3"> <input name="login-submit" id="login-submit" ng-click="signin()" tabindex="4" class="form-control btn btn-login" value="Log In" type="submit"> </div>
+												</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center"> <a href="" tabindex="5" class="forgot-password" id="forgot-password-link">Forgot Password?</a> </div>
+											</div>
+										</div>
+									</div>
+									</form>
+									<form id="register-form" name="registerForm" action="" method="post" role="form" style="display: none;">
+										<div class="form-group"> <input name="first_name" id="firstname" tabindex="1" class="form-control" placeholder="First name" ng-model="user.firstName" required="" type="text"> </div>
+										<div class="form-group"> <input name="last_name" id="lastname" tabindex="1" class="form-control" placeholder="Last name" ng-model="user.lastName" required="" type="text"> </div>
+										<div class="form-group"> <input name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" ng-model="user.email" required="" type="email"> </div>
+										<div
+										 class="form-group"> <input name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="" ng-model="user.password" type="password"> </div>
+								<div class="form-group"> <input name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required="" ng-model="user.confirmPassword"
+									 type="password"> </div>
+								<div class="form-group">
+									<div class="form-group" id="errors-panel" style="font-size:12px;color:red;display: none;">
+										<div class="row">
+											<ul>
+												<li>You must fill all the fields</li>
+												<li>The email address must be valid </li>
+												<li>You must confirm the passworrd</li>
+											</ul>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6 col-sm-offset-3"> <input name="register-submit" id="register-submit" ng-click="signup(registerForm.$valid)" tabindex="4" class="form-control btn btn-register" value="Register Now"
+											 type="submit"> </div>
+									</div>
+								</div>
+								</form>
+								<form id="forgot-form" action="" method="post" role="form" style="display: none;">
+									<div class="form-group"> <input name="email" id="forgot-email" tabindex="1" class="form-control" placeholder="email" value="" type="text"> </div>
+									<div class="row">
+										<div class="col-sm-6 col-sm-offset-3"> <input name="forgot-submit" id="forgot-submit" tabindex="4" class="form-control btn btn-register" value="Send me new password" type="submit"> </div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<script src="scripts/jquery-1.10.2.js"></script>
+		<script src="scripts/bootstrap.js"></script>
+		<script src="scripts/respond.js"></script>
+		<script src="scripts/kiosk.js" type="text/javascript"></script>
+	</body>
+	
 </html>

@@ -6,13 +6,15 @@
 		$("#signout").fadeOut(100);
 		$("#display-success").append("<div class='alert alert-success alert-dismissable' ><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>You're Signed out!</strong> </div>");
         e.preventDefault();
-    });	 //Login submit button click
+    });	 
+	//Login submit button click
    // $('#login-submit').click(function (e) {
        // var email = $('#login-email').val();
        // var password = $('#login-password').val();
        // signin(email, password);
         // e.preventDefault();
     // });	
+	
     //Register now submit button click
     $('#register-submit').click(function (e) {
         var firstName = $('#firstname').val();
